@@ -12,6 +12,11 @@
 		059323421BCA1CCB0026C4F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059323401BCA1CCB0026C4F9 /* Main.storyboard */; };
 		059323441BCA1CCB0026C4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059323431BCA1CCB0026C4F9 /* Assets.xcassets */; };
 		059323471BCA1CCB0026C4F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059323451BCA1CCB0026C4F9 /* LaunchScreen.storyboard */; };
+		0593234F1BCA1D170026C4F9 /* pharmacy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0593234E1BCA1D170026C4F9 /* pharmacy.jpg */; settings = {ASSET_TAGS = (); }; };
+		059323521BCA1EDD0026C4F9 /* ForceZoomWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059323511BCA1EDD0026C4F9 /* ForceZoomWidget.swift */; settings = {ASSET_TAGS = (); }; };
+		059323541BCA26720026C4F9 /* petronas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 059323531BCA26720026C4F9 /* petronas.jpg */; settings = {ASSET_TAGS = (); }; };
+		059323571BCA2B170026C4F9 /* forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 059323561BCA2B170026C4F9 /* forest.jpg */; settings = {ASSET_TAGS = (); }; };
+		059323591BCA2CEA0026C4F9 /* ForceZoomPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059323581BCA2CEA0026C4F9 /* ForceZoomPreview.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		059323431BCA1CCB0026C4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059323461BCA1CCB0026C4F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		059323481BCA1CCB0026C4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0593234E1BCA1D170026C4F9 /* pharmacy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pharmacy.jpg; path = assets/pharmacy.jpg; sourceTree = "<group>"; };
+		059323511BCA1EDD0026C4F9 /* ForceZoomWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForceZoomWidget.swift; path = forceZoom/ForceZoomWidget.swift; sourceTree = "<group>"; };
+		059323531BCA26720026C4F9 /* petronas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = petronas.jpg; path = assets/petronas.jpg; sourceTree = "<group>"; };
+		059323561BCA2B170026C4F9 /* forest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = forest.jpg; path = assets/forest.jpg; sourceTree = "<group>"; };
+		059323581BCA2CEA0026C4F9 /* ForceZoomPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForceZoomPreview.swift; path = forceZoom/ForceZoomPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,8 @@
 		0593233B1BCA1CCB0026C4F9 /* ForceZoom */ = {
 			isa = PBXGroup;
 			children = (
+				059323551BCA26760026C4F9 /* assets */,
+				059323501BCA1EB00026C4F9 /* forceZoom */,
 				0593233C1BCA1CCB0026C4F9 /* AppDelegate.swift */,
 				0593233E1BCA1CCB0026C4F9 /* ViewController.swift */,
 				059323401BCA1CCB0026C4F9 /* Main.storyboard */,
@@ -62,6 +74,25 @@
 				059323481BCA1CCB0026C4F9 /* Info.plist */,
 			);
 			path = ForceZoom;
+			sourceTree = "<group>";
+		};
+		059323501BCA1EB00026C4F9 /* forceZoom */ = {
+			isa = PBXGroup;
+			children = (
+				059323511BCA1EDD0026C4F9 /* ForceZoomWidget.swift */,
+				059323581BCA2CEA0026C4F9 /* ForceZoomPreview.swift */,
+			);
+			name = forceZoom;
+			sourceTree = "<group>";
+		};
+		059323551BCA26760026C4F9 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				059323561BCA2B170026C4F9 /* forest.jpg */,
+				0593234E1BCA1D170026C4F9 /* pharmacy.jpg */,
+				059323531BCA26720026C4F9 /* petronas.jpg */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,8 +152,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				059323571BCA2B170026C4F9 /* forest.jpg in Resources */,
 				059323471BCA1CCB0026C4F9 /* LaunchScreen.storyboard in Resources */,
 				059323441BCA1CCB0026C4F9 /* Assets.xcassets in Resources */,
+				059323541BCA26720026C4F9 /* petronas.jpg in Resources */,
+				0593234F1BCA1D170026C4F9 /* pharmacy.jpg in Resources */,
 				059323421BCA1CCB0026C4F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +169,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0593233F1BCA1CCB0026C4F9 /* ViewController.swift in Sources */,
+				059323521BCA1EDD0026C4F9 /* ForceZoomWidget.swift in Sources */,
 				0593233D1BCA1CCB0026C4F9 /* AppDelegate.swift in Sources */,
+				059323591BCA2CEA0026C4F9 /* ForceZoomPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
