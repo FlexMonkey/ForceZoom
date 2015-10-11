@@ -1,9 +1,9 @@
 # ForceZoom
-Zoom Into Image Details using 3D Touch Peek
+#####Zoom Into Image Details using 3D Touch Peek
 
 ![screenshot](/ForceZoom/forceZoom.gif)
 
-Companion project to http://flexmonkey.blogspot.co.uk/2015/10/forcezoom-popup-image-detail-view-using.html
+######Companion project to http://flexmonkey.blogspot.co.uk/2015/10/forcezoom-popup-image-detail-view-using.html
 
 My experiments with 3D Touch on the iPhone 6s continue with _ForceZoom_, an extended `UIImageView` that displays a 1:1 peek detail view of a touched point on a large image.
 
@@ -33,7 +33,7 @@ To implement a _ForceZoom_ component in an application, instantiate with a defau
             view.addSubview(imageView)
         }
     }
-    ```
+```
 
 ##Displaying Preview Frame
 
@@ -45,7 +45,7 @@ Since the popup preview will be the largest square that can fit on the screen:
         return min(UIScreen.mainScreen().bounds.size.width,
             UIScreen.mainScreen().bounds.size.height)
     }
-    ```
+```
 
 The white preview box, which is a `CAShapeLayer`, needs to be that size at the same scale as the image has been scaled on the screen. The maths to do this is in the `displayPreviewFrame()` method which is invoked by `touchesBegan`:
 
@@ -61,7 +61,7 @@ Where `imageScale` is simply the component's width or height divided by the imag
         return min(bounds.size.width / image!.size.width, bounds.size.height / image!.size.height)
 
     }
-    ```
+```
 
 ##Launching the Peek Preview
 
