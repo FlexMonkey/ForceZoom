@@ -61,7 +61,7 @@ class ForceZoomWidget: UIImageView
             return
         }
         
-        displayPrevewFrame(location)
+        displayPreviewFrame(location)
     }
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?)
@@ -71,7 +71,7 @@ class ForceZoomWidget: UIImageView
         previewFrameLayer.path = nil
     }
     
-    func displayPrevewFrame(location: CGPoint)
+    func displayPreviewFrame(location: CGPoint)
     {
         let previewFrameSize = peekPreviewSize * imageScale
         
@@ -89,7 +89,8 @@ class ForceZoomWidget: UIImageView
     
     var peekPreviewSize: CGFloat
     {
-        return min(UIScreen.mainScreen().bounds.size.width, UIScreen.mainScreen().bounds.size.height)
+        return min(UIScreen.mainScreen().bounds.size.width,
+            UIScreen.mainScreen().bounds.size.height)
     }
     
     override func layoutSubviews()
@@ -107,16 +108,14 @@ extension ForceZoomWidget: UIViewControllerPreviewingDelegate
         {
             return nil
         }
-        
-        let locationInView = self.convertPoint(location, toView: previewingContext.sourceView)
-        
+
         let offset = (peekPreviewSize * imageScale / (imageWidth * imageScale)) / 2
         
         let leftBorder = (bounds.width - (imageWidth * imageScale)) / 2
-        let normalisedXPosition = ((locationInView.x - leftBorder) / (imageWidth * imageScale)) - offset
+        let normalisedXPosition = ((location.x - leftBorder) / (imageWidth * imageScale)) - offset
         
         let topBorder = (bounds.height - (imageHeight * imageScale)) / 2
-        let normalisedYPosition = ((locationInView.y - topBorder) / (imageHeight * imageScale)) - offset
+        let normalisedYPosition = ((location.y - topBorder) / (imageHeight * imageScale)) - offset
   
         let normalisedPreviewPoint = CGPoint(x: normalisedXPosition, y: normalisedYPosition)
  
