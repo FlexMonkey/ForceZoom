@@ -109,16 +109,16 @@ extension ForceZoomWidget: UIViewControllerPreviewingDelegate
             return nil
         }
 
-        let offset = (peekPreviewSize * imageScale / (imageWidth * imageScale)) / 2
+        let offset = ((peekPreviewSize * imageScale) / (imageWidth * imageScale)) / 2
         
         let leftBorder = (bounds.width - (imageWidth * imageScale)) / 2
         let normalisedXPosition = ((location.x - leftBorder) / (imageWidth * imageScale)) - offset
         
         let topBorder = (bounds.height - (imageHeight * imageScale)) / 2
         let normalisedYPosition = ((location.y - topBorder) / (imageHeight * imageScale)) - offset
-  
+      
         let normalisedPreviewPoint = CGPoint(x: normalisedXPosition, y: normalisedYPosition)
- 
+     
         let peek = ForceZoomPreview(normalisedPreviewPoint: normalisedPreviewPoint, image: image!)
         
         peek.preferredContentSize = CGSize(width: peekPreviewSize, height: peekPreviewSize)
